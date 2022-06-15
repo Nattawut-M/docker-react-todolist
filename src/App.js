@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
+import 'animate.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p className="fs-1 text-info animate__animated animate__bounce">
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
