@@ -13,10 +13,14 @@
 
 - show all images `docker images`
 - check your container is running with `docker ps` or show all container `docker ps -a`
-- stop your container with `docker stop <container_id>` or `docker stop <container_name>`
+- start exists container with `docker container start <container_id>`
+- stop your container with `docker container stop <container_id>` or `docker container stop <container_name>`
 - remove container `docker container rm <container_id>`
 
----
+## Preview
+
+1. หน้าแรก ![หน้าแรก](./src/images/home.png)
+1. เพิ่มรายการ ![เพิ่มรายการ](./src/images/todo.png)
 
 ## Getting Started with Create React App
 
