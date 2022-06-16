@@ -13,7 +13,7 @@ const Todo = ({ todo, onDelete }) => {
         <p className={'w-100 fs-6 text-break m-0 py-1 px-3'} aria-label="Text input with checkbox">
           {todo.text}
           <span className="d-block text-muted" style={{ fontSize: '10px' }}>
-            {new Date(todo.createdAt).toLocaleDateString()}
+            {new Date(todo.createdAt).toLocaleString('th-Th') + ' น.'}
           </span>
         </p>
         <div className="todo-action ">
