@@ -28,3 +28,11 @@ code {
 .fc-accent {
   color: #FF8496;
 }
+
+.bg-accent {
+  background: #FF8496;
+}
+
+.bg-accent-hover:hover {
+  background: #df3851;
+}
