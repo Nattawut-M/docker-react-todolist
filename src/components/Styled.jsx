@@ -5,22 +5,19 @@ function handleFontWeight(w) {
   switch (w) {
     case 'bolder':
       return 'font-weight: bolder';
-      break;
+
     case 'bold':
       return 'font-weight: bold';
-      break;
+
     case 'lighter':
       return 'font-weight: lighter';
-      break;
 
     case 'light':
       return 'font-weight: light';
-      break;
 
     default:
       console.log(!!w ? `font-weight: ${w}` : 'font-weight: normal');
       return !!w ? `font-weight: ${w}` : 'font-weight: normal';
-      break;
   }
 }
 
