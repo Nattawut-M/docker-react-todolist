@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const InputBar = ({ setTodo }) => {
   const [input, setInput] = React.useState('');
 
@@ -30,7 +29,7 @@ const InputBar = ({ setTodo }) => {
           value={input}
           onChange={handleChange}
         />
-        <button className="btn btn-primary px-2" type="submit" id="button-addon2" onClick={handleSubmit}>
+        <button disabled={input.length <= 0} className="btn btn-primary px-2" type="submit" id="button-addon2" onClick={handleSubmit}>
           เพิ่มรายการ
         </button>
       </div>

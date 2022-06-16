@@ -44,27 +44,25 @@ function App() {
       </Header>
 
       <div className="container">
-        <Text className="display-6 fc-accent my-3" fw={900} color={theme.accent.light}>
+        <Text className="display-6 my-3" fw={900} color={theme.accent.light}>
           Todo List App
         </Text>
         <InputBar setTodo={onSubmit} />
-        <button className="btn text-info fc-secondary position-relative my-2" onClick={onDeleteAll}>
+        <button className="btn text-info position-relative my-2" disabled={todoList.length <= 0} onClick={onDeleteAll}>
           ลบทั้งหมด
-          <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-accent bg-accent-hover">
+          <span className="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-accent bg-accent-hover mx-1">
             {todoList.length}
-            <span class="visually-hidden">count of todo list</span>
+            <span className="visually-hidden">count of todo list</span>
           </span>
         </button>
-        
-        <div id="todoGroup" className="d flex flex-column">
-          {todoList.length <= 0 ? (
-            <Text className="fs-6 my-4" fw={900} color={'#757575'} align={'center'}>
-              ไม่มีรายการที่ต้องทำ
-            </Text>
-          ) : (
-            todoList.map((todo) => <Todo key={todo._id} todo={todo} onDelete={onDelete} />)
-          )}
-        </div>
+
+        {todoList.length <= 0 ? (
+          <Text className="fs-6 my-4" fw={900} color={'#757575'} align={'center'}>
+            ไม่มีรายการที่ต้องทำ
+          </Text>
+        ) : (
+          todoList.map((todo) => <Todo key={todo._id} todo={todo} onDelete={onDelete} />)
+        )}
       </div>
     </Wrapper>
   );
